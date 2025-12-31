@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Etoile | Mar del Plata</title>
+
     <style>
         /* ===== RESET ===== */
         * {
@@ -78,10 +78,30 @@
         .hero-overlay h2 {
             font-size: 42px;
             margin-bottom: 10px;
+            letter-spacing: 1px;
         }
 
         .hero-overlay p {
             font-size: 20px;
+        }
+
+        /* ===== HOTEL STARS ===== */
+        .rating-box {
+            margin-top: 18px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .star {
+            font-size: 26px;
+            color: #f5c77a;
+            text-shadow: 0 0 6px rgba(245,199,122,0.6);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .star:hover {
+            transform: scale(1.2);
+            color: #ffd98e;
         }
 
         /* ===== SECTIONS ===== */
@@ -171,6 +191,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- ===== HEADER ===== -->
@@ -191,6 +212,14 @@
         <div class="hero-overlay">
             <h2>Hotel Etoile</h2>
             <p>Confort y elegancia en Mar del Plata</p>
+
+            <!-- ⭐ ESTRELLAS -->
+            <div class="rating-box">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
         </div>
     </section>
 
@@ -202,12 +231,11 @@
                 <h3>El Hotel</h3>
                 <p>
                     Hotel Etoile ofrece un ambiente cálido y elegante, ideal para quienes buscan
-                    comodidad, tranquilidad y una atención personalizada. Ubicado estratégicamente
-                    en Mar del Plata, es una excelente opción tanto para viajes de descanso como de trabajo.
+                    comodidad, tranquilidad y una atención personalizada.
                 </p>
                 <p>
-                    Nuestro compromiso es brindar una experiencia confortable, con espacios cuidados
-                    y un servicio atento que haga sentir a cada huésped como en casa.
+                    Nuestro compromiso es brindar una experiencia confortable y cuidada,
+                    haciendo sentir a cada huésped como en casa.
                 </p>
             </div>
         </div>
