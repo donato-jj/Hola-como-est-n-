@@ -1,271 +1,98 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Etoile | Mar del Plata</title>
-
-    <style>
-        /* ===== RESET ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* ===== GENERAL ===== */
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            color: #4a3b2a;
-            background-color: #f7f3ee;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-
-        /* ===== HEADER ===== */
-        .header {
-            background-color: #efe6d8;
-            border-bottom: 1px solid #d6c6ad;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 28px;
-            color: #6b4e2e;
-        }
-
-        .nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #6b4e2e;
-            font-weight: 500;
-        }
-
-        .nav a:hover {
-            color: #a67c52;
-        }
-
-        /* ===== HERO ===== */
-        .hero {
-            background-image: url('fachada.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 70vh;
-            position: relative;
-        }
-
-        .hero-overlay {
-            background-color: rgba(0,0,0,0.45);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-        }
-
-        .hero-overlay h2 {
-            font-size: 42px;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-
-        .hero-overlay p {
-            font-size: 20px;
-        }
-
-        /* ===== HOTEL STARS ===== */
-        .rating-box {
-            margin-top: 18px;
-            display: flex;
-            gap: 8px;
-        }
-
-        .star {
-            font-size: 26px;
-            color: #f5c77a;
-            text-shadow: 0 0 6px rgba(245,199,122,0.6);
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .star:hover {
-            transform: scale(1.2);
-            color: #ffd98e;
-        }
-
-        /* ===== SECTIONS ===== */
-        .section {
-            background-color: #ffffff;
-        }
-
-        .hotel-section {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .hotel-section img {
-            width: 50%;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-
-        .hotel-text h3 {
-            font-size: 30px;
-            margin-bottom: 15px;
-            color: #6b4e2e;
-        }
-
-        /* ===== LOCATION ===== */
-        .location {
-            background-color: #f3eadc;
-            text-align: center;
-        }
-
-        .location h3 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        /* ===== CONTACT ===== */
-        .contact {
-            text-align: center;
-        }
-
-        .contact h3 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .phone {
-            font-size: 22px;
-            margin-bottom: 20px;
-        }
-
-        .call-button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #a67c52;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-        }
-
-        .call-button:hover {
-            background-color: #8b623d;
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            background-color: #6b4e2e;
-            color: #fff;
-            text-align: center;
-            padding: 25px 10px;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .hotel-section {
-                flex-direction: column;
-            }
-
-            .hotel-section img {
-                width: 100%;
-            }
-
-            .nav {
-                display: none;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Hotel Etoile | Mar del Plata</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0B1C2D;
+      color: #FFFFFF;
+    }
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(11,28,45,0.7), rgba(11,28,45,0.9)),
+                  url('hero-hotel.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+    .btn {
+      padding: 12px 30px;
+      background: #4FC3F7;
+      color: #0B1C2D;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      box-shadow: 0 0 15px #4FC3F7;
+    }
+    section {
+      padding: 80px 10%;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(79,195,247,0.3);
+    }
+    footer {
+      background: #081421;
+      text-align: center;
+      padding: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-
 <body>
 
-    <!-- ===== HEADER ===== -->
-    <header class="header">
-        <div class="container header-content">
-            <h1 class="logo">Hotel Etoile</h1>
-            <nav class="nav">
-                <a href="#inicio">Inicio</a>
-                <a href="#hotel">El Hotel</a>
-                <a href="#ubicacion">Ubicación</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
-        </div>
-    </header>
+<header>
+  <div>
+    <h1>Hotel Etoile ⭐⭐⭐</h1>
+    <p>Confort moderno en el corazón de Mar del Plata</p>
+    <a href="#" class="btn">Reservar ahora</a>
+  </div>
+</header>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="inicio">
-        <div class="hero-overlay">
-            <h2>Hotel Etoile</h2>
-            <p>Confort y elegancia en Mar del Plata</p>
+<section>
+  <h2>Servicios</h2>
+  <div class="services">
+    <div class="card">🛏️ Habitaciones confortables</div>
+    <div class="card">📶 Wi-Fi alta velocidad</div>
+    <div class="card">🕒 Recepción 24 hs</div>
+    <div class="card">☕ Desayuno incluido</div>
+  </div>
+</section>
 
-            <!-- ⭐ ESTRELLAS -->
-            <div class="rating-box">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== EL HOTEL ===== -->
-    <section class="section" id="hotel">
-        <div class="container hotel-section">
-            <img src="recepcion.jpg" alt="Recepción Hotel Etoile">
-            <div class="hotel-text">
-                <h3>El Hotel</h3>
-                <p>
-                    Hotel Etoile ofrece un ambiente cálido y elegante, ideal para quienes buscan
-                    comodidad, tranquilidad y una atención personalizada.
-                </p>
-                <p>
-                    Nuestro compromiso es brindar una experiencia confortable y cuidada,
-                    haciendo sentir a cada huésped como en casa.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== UBICACIÓN ===== -->
-    <section class="section location" id="ubicacion">
-        <div class="container">
-            <h3>Ubicación</h3>
-            <p>📍 Santiago del Estero 1869</p>
-            <p>Mar del Plata, Argentina</p>
-        </div>
-    </section>
-
-    <!-- ===== CONTACTO ===== -->
-    <section class="section contact" id="contacto">
-        <div class="container">
-            <h3>Contacto</h3>
-            <p class="phone">📞 0223 493-4968</p>
-            <a href="tel:02234934968" class="call-button">Llamar ahora</a>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <p><strong>Hotel Etoile</strong></p>
-        <p>Santiago del Estero 1869</p>
-        <p>Tel: 0223 493-4968</p>
-        <p>Mar del Plata – Argentina</p>
-    </footer>
+<footer>
+  <p>📍 Santiago del Estero 1869, Mar del Plata</p>
+  <p>📞 0223 493-4968</p>
+  <p>Hotel Etoile © 2025</p>
+</footer>
 
 </body>
 </html>
