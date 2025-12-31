@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -66,8 +65,47 @@
       padding: 40px;
       font-size: 0.9rem;
     }
+
+    /* ===== GALERÍA HOTEL ===== */
+    .gallery-section {
+      margin-top: 60px;
+    }
+
+    .gallery-section h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .gallery-item {
+      background: rgba(255,255,255,0.04);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .gallery-caption {
+      padding: 18px;
+      font-size: 0.95rem;
+      text-align: center;
+      opacity: 0.9;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -85,6 +123,35 @@
     <div class="card">📶 Wi-Fi alta velocidad</div>
     <div class="card">🕒 Recepción 24 hs</div>
     <div class="card">☕ Desayuno incluido</div>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <h2>Galería del Hotel</h2>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item">
+      <img src="habitacion-matrimonial.jpg" alt="Habitación matrimonial Hotel Etoile">
+      <div class="gallery-caption">
+        Habitación matrimonial amplia y confortable
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="habitacion-completa.jpg" alt="Habitación completa Hotel Etoile">
+      <div class="gallery-caption">
+        Ambiente cálido, iluminación suave y descanso garantizado
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="toallas-etoile.jpg" alt="Toallas bordadas Hotel Etoile">
+      <div class="gallery-caption">
+        Detalles de calidad · Toallas bordadas Hotel Etoile ⭐⭐⭐
+      </div>
+    </div>
+
   </div>
 </section>
 
